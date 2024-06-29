@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.dealnow.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_welcome2Fragment"
+            app:destination="@id/welcome2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome2Fragment"
+        android:name="com.example.dealnow.welcome2Fragment"
+        android:label="fragment_welcome2"
+        tools:layout="@layout/fragment_welcome2" >
+        <action
+            android:id="@+id/action_welcome2Fragment_to_welcome3Fragment"
+            app:destination="@id/welcome3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome3Fragment"
+        android:name="com.example.dealnow.welcome3Fragment"
+        android:label="fragment_welcome3"
+        tools:layout="@layout/fragment_welcome3" >
+        <action
+            android:id="@+id/action_welcome3Fragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.dealnow.loginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_startedFragment"
+            app:destination="@id/startedFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotpassFragment"
+            app:destination="@id/forgotpassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.dealnow.registerFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_startedFragment"
+            app:destination="@id/startedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotpassFragment"
+        android:name="com.example.dealnow.forgotpassFragment"
+        android:label="fragment_forgotpass"
+        tools:layout="@layout/fragment_forgotpass" />
+    <fragment
+        android:id="@+id/startedFragment"
+        android:name="com.example.dealnow.startedFragment"
+        android:label="fragment_started"
+        tools:layout="@layout/fragment_started" />
+</navigation>

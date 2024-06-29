@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.dealnow.homexFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_homex" />
+    <fragment
+        android:id="@+id/wishlistFragment"
+        android:name="com.example.dealnow.wishlistxFragment"
+        android:label="Wishlist"
+        tools:layout="@layout/fragment_wishlistx" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.dealnow.cartxFragment"
+        android:label="Cart"
+        tools:layout="@layout/fragment_cartx" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.dealnow.searchxFragment"
+        android:label="fragment_searchx"
+        tools:layout="@layout/fragment_searchx" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.dealnow.settingxFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_settingx" />
+</navigation>

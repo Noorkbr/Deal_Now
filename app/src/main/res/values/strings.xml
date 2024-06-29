@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Deal Now</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="cart">Cart</string>
+    <string name="search">Search</string>
+    <string name="setting">Setting</string>
+    <string name="_1_3">1/3</string>
+    <string name="choose_products">Choose Products</string>
+    <string name="welcome_to_your_app_name_where_shopping_meets_convenience_and_style_discover_a_curated_selection_of_your_product_category_that_s_handpicked_just_for_you_whether_you_re_looking_for_everyday_essentials_or_unique_finds_we_ve_got_you_covered_start_exploring_and_find_exactly_what_you_need_right_at_your_fingertips">Welcome to [Your App Name], where shopping meets convenience and style! Discover a curated selection of [your product category] that\'s handpicked just for you. </string>
+    <string name="next">Next</string>
+    <string name="make_payment">Make Payment</string>
+    <string name="prev">Prev</string>
+    <string name="_2_3">2/3</string>
+    <string name="_3_3">3/3</string>
+    <string name="get_your_order">Get Your Order</string>
+    <string name="get_started">Get Started</string>
+    <string name="welcome_back">Welcome \n Back!</string>
+    <string name="phone_number">      Phone Number</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="or_continue_with">- OR Continue with -</string>
+    <string name="create_an_account">Create An Account</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="i_already_have_an_account">I Already Have an Account</string>
+    <string name="create_an_naccount">Create an \naccount</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="we_will_send_you_a_message_to_set_or_reset_n_your_new_password">* We will send you a message to set or reset\n your new password</string>
+    <string name="submit">Submit</string>
+    <string name="find_it_here_buy_it_now">Find it here, buy it now!</string>
+    <string name="get_startedx">Get Started</string>
+</resources>

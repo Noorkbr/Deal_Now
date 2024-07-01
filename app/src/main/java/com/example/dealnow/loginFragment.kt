@@ -12,7 +12,9 @@ import com.example.fitglow.base.BaseFragment
 
 class loginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::inflate) {
     override fun setListener() {
+
         binding.loginbtn.setOnClickListener {
+
             findNavController().navigate(R.id.action_loginFragment_to_startedFragment)
 
     }

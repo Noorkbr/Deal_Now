@@ -1,14 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".homexFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".homexFragment"
+    android:background="@color/white"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/tv_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18ssp"
+            android:layout_marginTop="@dimen/_48ssp"
+            android:text="Hi, Noor"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.search.SearchBar
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="@dimen/_16ssp"
+            android:backgroundTint="#E9F3FF"
+            android:hint="Search"
+            app:layout_constraintTop_toBottomOf="@id/tv_userName" />
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_18ssp"
+
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:text="Category"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchBar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16ssp"
+            android:text="View All"
+            app:layout_constraintBottom_toBottomOf="@id/tv_category"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_category" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoryItemList"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/_24ssp"
+            android:layout_height="71dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintStart_toStartOf="@id/tv_category"
+            app:layout_constraintTop_toBottomOf="@id/tv_category"
+            tools:listitem="@layout/item_category" />
+
+
+        <androidx.cardview.widget.CardView
+            android:backgroundTint="#FD6E87"
+            android:id="@+id/tv_Trend_card"
+            app:cardCornerRadius="@dimen/_10ssp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55ssp"
+            android:layout_margin="@dimen/_18ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/categoryItemList" >
+
+            <TextView
+                android:layout_marginStart="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/trending_products"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryItemList"
+
+                />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="@dimen/_35ssp"
+                android:src="@drawable/calendar"
+                android:textColor="@color/white"
+                android:layout_marginStart="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryItemList" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_35ssp"
+                android:layout_marginTop="@dimen/_34ssp"
+                android:src="@drawable/calendar"
+                android:text="Last Date 29/02/22"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryItemList" />
+
+<View
+    android:layout_width="@dimen/_80ssp"
+    android:background="@drawable/button_custom"
+    android:layout_height="35sp"
+    android:text="   View all ->"
+    android:textColor="@color/white"
+    android:layout_marginStart="230dp"
+    android:layout_marginTop="18dp"
+
+    />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View all ->"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="25dp"
+
+                />
+
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/trendItemRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_86ssp"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/_20ssp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/categoryItemList"
+            tools:listitem="@layout/trending_item_layout" />
+        <androidx.cardview.widget.CardView
+            android:backgroundTint="@color/white"
+            android:id="@+id/tv_offer_card"
+            app:cardCornerRadius="@dimen/_10ssp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55ssp"
+            android:layout_margin="@dimen/_18ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/trendItemRecycler" >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:src="@drawable/offerx"
+
+
+                />
+            <TextView
+                android:layout_marginStart="90dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/special_offers"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryItemList"
+
+                />
+            <TextView
+                android:layout_marginStart="90dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We make sure you get the offer you need at best prices"
+                android:layout_marginTop="@dimen/_30ssp"
+                android:textColor="@color/black"
+
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryItemList"
+
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

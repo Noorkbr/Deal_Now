@@ -39,6 +39,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.coil)
     implementation (libs.ssp.android)
     implementation (libs.androidx.navigation.ui.ktx)
     implementation (libs.androidx.navigation.fragment.ktx)

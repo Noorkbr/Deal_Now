@@ -1,59 +1,52 @@
 package com.example.dealnow
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import com.example.dealnow.Adapters.CategoryItemAdapter
+import com.example.dealnow.Adapters.ListTrendAdapter
+import com.example.dealnow.data.ListData
+import com.example.dealnow.databinding.FragmentHomexBinding
+import com.example.fitglow.base.BaseFragment
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [homexFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class homexFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class homexFragment : BaseFragment<FragmentHomexBinding>(FragmentHomexBinding::inflate) {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    private lateinit var categoryItemAdapter: CategoryItemAdapter
+    private lateinit var lisTrendAdapter: ListTrendAdapter
+
+
+    val categoryItem = listOf(
+        ListData(R.drawable.categoryx, "Beauty"),
+        ListData(R.drawable.fashion, "Fashion"),
+        ListData(R.drawable.kids, "Kids"),
+        ListData(R.drawable.woman, "Women"),
+        ListData(R.drawable.men, "Men"),
+
+    )
+    val trendItem = listOf(
+        ListData(R.drawable.trendproducts1, "Premium watch"),
+        ListData(R.drawable.shoe, "White Shoe"),
+        ListData(R.drawable.scart, "Premium Dress"),
+        ListData(R.drawable.jacket, "Jacket"),
+        ListData(R.drawable.dresswomen, "Party Dress"),
+
+        )
+
+    override fun setListener() {
+        setRecycler1Data()
+        setRecycler2Data()
+
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_homex, container, false)
+    override fun allObserver() {
+
+
+    }
+    private fun setRecycler1Data() {
+        categoryItemAdapter = CategoryItemAdapter(categoryItem)
+        binding.categoryItemList.adapter = categoryItemAdapter
+    }
+    private fun setRecycler2Data() {
+        lisTrendAdapter = ListTrendAdapter(trendItem)
+        binding.trendItemRecycler.adapter = lisTrendAdapter
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment homexFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            homexFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }

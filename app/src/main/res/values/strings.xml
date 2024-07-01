@@ -34,4 +34,6 @@
     <string name="submit">Submit</string>
     <string name="find_it_here_buy_it_now">Find it here, buy it now!</string>
     <string name="get_startedx">Get Started</string>
+    <string name="trending_products">Trending Products</string>
+    <string name="special_offers">Special Offers</string>
 </resources>

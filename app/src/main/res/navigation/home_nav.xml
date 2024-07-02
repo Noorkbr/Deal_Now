@@ -3,31 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_nav"
-    app:startDestination="@id/homeFragment">
-
+    app:startDestination="@id/homeFragment2">
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.dealnow.homexFragment"
-        android:label="Home"
-        tools:layout="@layout/fragment_homex" />
+        android:id="@+id/homeFragment2"
+        android:name="com.example.dealnow.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/wishlistFragment"
-        android:name="com.example.dealnow.wishlistxFragment"
-        android:label="Wishlist"
-        tools:layout="@layout/fragment_wishlistx" />
+        android:id="@+id/wishlistFragment2"
+        android:name="com.example.dealnow.WishlistFragment"
+        android:label="fragment_wishlist"
+        tools:layout="@layout/fragment_wishlist" />
     <fragment
-        android:id="@+id/cartFragment"
-        android:name="com.example.dealnow.cartxFragment"
-        android:label="Cart"
-        tools:layout="@layout/fragment_cartx" />
+        android:id="@+id/settingFragment2"
+        android:name="com.example.dealnow.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
     <fragment
-        android:id="@+id/searchFragment"
-        android:name="com.example.dealnow.searchxFragment"
-        android:label="fragment_searchx"
-        tools:layout="@layout/fragment_searchx" />
+        android:id="@+id/cartFragment2"
+        android:name="com.example.dealnow.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
     <fragment
-        android:id="@+id/settingFragment"
-        android:name="com.example.dealnow.settingxFragment"
-        android:label="Setting"
-        tools:layout="@layout/fragment_settingx" />
+        android:id="@+id/searchFragment2"
+        android:name="com.example.dealnow.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
 </navigation>

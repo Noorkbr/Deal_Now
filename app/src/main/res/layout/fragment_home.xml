@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".homexFragment"
-    android:background="@color/white"
-    >
+    tools:context=".HomeFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -120,16 +117,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/categoryItemList" />
 
-<View
-    android:layout_width="@dimen/_80ssp"
-    android:background="@drawable/button_custom"
-    android:layout_height="35sp"
-    android:text="   View all ->"
-    android:textColor="@color/white"
-    android:layout_marginStart="230dp"
-    android:layout_marginTop="18dp"
+            <View
+                android:layout_width="@dimen/_80ssp"
+                android:background="@drawable/button_custom"
+                android:layout_height="35sp"
+                android:text="   View all ->"
+                android:textColor="@color/white"
+                android:layout_marginStart="230dp"
+                android:layout_marginTop="18dp"
 
-    />
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -164,7 +161,7 @@
             android:id="@+id/tv_offer_card"
             app:cardCornerRadius="@dimen/_10ssp"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_55ssp"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/_18ssp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/trendItemRecycler" >
@@ -208,6 +205,56 @@
 
 
         </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:backgroundTint="@color/white"
+            android:id="@+id/offer_card"
+            app:cardCornerRadius="@dimen/_10ssp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_18ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_offer_card" >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:src="@drawable/offerx"
+
+
+                />
+            <TextView
+                android:layout_marginStart="90dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/special_offers"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryItemList"
+
+                />
+            <TextView
+                android:layout_marginStart="90dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We make sure you get the offer you need at best prices"
+                android:layout_marginTop="@dimen/_30ssp"
+                android:textColor="@color/black"
+
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryItemList"
+
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

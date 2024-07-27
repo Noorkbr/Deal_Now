@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.079"
         />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/numberTextField"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -39,6 +39,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
 
+
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -53,7 +54,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/filledTextField2"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
